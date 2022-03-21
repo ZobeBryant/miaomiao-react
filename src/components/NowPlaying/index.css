@@ -1,0 +1,9 @@
+#content .movie_body {
+    flex: 1;
+    overflow: hidden;
+  }
+  .movie_body ul {
+    margin: 0 12px;
+    overflow: hidden;
+  }
+  
