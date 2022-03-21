@@ -38,7 +38,7 @@ const Detail = (props) => {
             if (msg === "ok") {
                 setFilm(res.data.data.film)
                 setIsLoading(false)
-                console.log(res.data.data.film)
+                // console.log(res.data.data.film)
             }
         });
     }, [])

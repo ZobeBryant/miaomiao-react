@@ -8,6 +8,8 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 import {connect} from 'react-redux'
 // 引入header action
 import {changetitle} from '../../redux/actions/header'
+import Search from '../../components/Search';
+import City from '../../components/City';
 const Movie = () => {
 
     // componentDidMount
@@ -34,8 +36,10 @@ const Movie = () => {
                     </div>
                     {/* 注册路由 */}
                     <Switch>
+                        <Route path="/movie/city" component={City} />
                         <Route path="/movie/nowPlaying" component={NowPlaying} />
                         <Route path="/movie/comingSoon" component={CommingSoon} />
+                        <Route path="/movie/search" component={Search} />
                         <Redirect to="/movie/nowPlaying" />
                     </Switch>
                 </div>
