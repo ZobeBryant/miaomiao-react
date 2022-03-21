@@ -40,7 +40,7 @@ const Scroller = (props) => {
     return (
         <div className="wrapper" style={{height: `${window.innerHeight - 51 - 52 - 46 + 'px'}`}} ref={wrapper}>
             {/* 这里相当于vue中的slot */}
-            {render()}
+            {render? render() : null}
 
         </div>
     );

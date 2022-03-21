@@ -52,10 +52,10 @@ const Search = () => {
                     {
                         movieList.map((item) => {
                             return <li key={item.id}>
-                                <div class="img">
+                                <div className="img">
                                     <img src={setWH(item.img, '128.180')} />
                                 </div>
-                                <div class="info">
+                                <div className="info">
                                     <p>
                                         <span>{item.nm}</span>
                                         <span>{item.sc}</span>

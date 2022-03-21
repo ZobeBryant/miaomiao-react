@@ -16,7 +16,7 @@ const Detail = (props) => {
 
     // 点击返回按钮返回到上一个路由，设置Header信息
     function goBack() {
-        changetitle({ title: '喵喵影院', render: null })
+        changetitle({ title: '喵喵电影', render: null })
         history.goBack()
     }
 
@@ -38,7 +38,6 @@ const Detail = (props) => {
             if (msg === "ok") {
                 setFilm(res.data.data.film)
                 setIsLoading(false)
-                // console.log(res.data.data.film)
             }
         });
     }, [])
@@ -72,7 +71,7 @@ const Detail = (props) => {
                         <p>{film.synopsis}</p>
                     </div>
                     <div className="detail_player swiper-container">
-                        <ul class="swiper-wrapper">
+                        <ul className="swiper-wrapper">
                             <Swiper slideSize={45} indicator={() => null}>
                                 {
                                     film.photos.map((item, index) => {

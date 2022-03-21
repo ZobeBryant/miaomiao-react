@@ -36,7 +36,7 @@ const MovieItem = (props) => {
                 <p>{nation}|{runtime}分钟</p>
             </div>
             {
-                isNowPlaying ? <div className="btn_mall">购票</div> : <div class="btn_pre">预售</div>
+                isNowPlaying ? <div className="btn_mall">购票</div> : <div className="btn_pre">预售</div>
             }
 
         </li>

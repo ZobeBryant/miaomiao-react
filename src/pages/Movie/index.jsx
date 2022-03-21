@@ -10,11 +10,11 @@ import {connect} from 'react-redux'
 import {changetitle} from '../../redux/actions/header'
 import Search from '../../components/Search';
 import City from '../../components/City';
-const Movie = () => {
-
+const Movie = (props) => {
+    const {changetitle} = props
     // componentDidMount
     React.useEffect(() => {
-        changetitle({title: '喵喵影院', render: null })
+        changetitle({title: '喵喵电影', render: null })    
     }, [])
 
     return (
@@ -26,7 +26,7 @@ const Movie = () => {
                             <span>大连</span>
                             <i className="iconfont icon-lower-triangle"></i>
                         </MyNavLink>
-                        <div class="hot_swtich">
+                        <div className="hot_swtich">
                             <MyNavLink to="/movie/nowPlaying" className="hot_item">正在热映</MyNavLink>
                             <MyNavLink to="/movie/comingSoon" className="hot_item">即将上映</MyNavLink>
                         </div>
